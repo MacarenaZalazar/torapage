@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import backgroundImg from './utils/background-image.jpg'
+import porTodas from './utils/porTodas.mp3'
+import { AppContainer } from './appStyle';
+import useSound from 'use-sound'
+import { useEffect } from 'react';
 
 function App() {
+  const[play, {stop}] = useSound(porTodas)
+  useEffect(()=>{
+    play()
+  }, [play])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer img={backgroundImg}>
+      <h1>Bienvenidxs a TORA</h1>
+    </AppContainer>
   );
 }
 
