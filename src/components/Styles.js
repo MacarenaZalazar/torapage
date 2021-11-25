@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+//Bandcamp
 export const BCcont = styled.div`
     align-self: center;
     display: flex;
@@ -25,7 +26,7 @@ export const TextContainer = styled.div`
 
     }
 `
-
+//About
 export const AboutCont = styled.div`
     transition: 0.5s ease;
     margin: 4rem 1rem; 
@@ -44,11 +45,16 @@ flex-direction: ${props => props.direction} ;
 
 }
 `
+
+//credits
 export const Credits = styled.p`
     color: white;
     margin: 1.5rem
+    a{
+        color: white;
+    }
 `
-
+//arrow
 export const UpArrow = styled.a`
 position: fixed;
 color:white;
@@ -62,7 +68,7 @@ font-size: 3rem;
     }
 
 `
-
+//cafecito
 export const CafecitoCont = styled.div`
 color: white;
 display: flex;
@@ -74,7 +80,7 @@ margin: 4.5rem 1rem;
         margin: 1rem 0.7rem;
     }
 `
-
+//video
 export const VideoCont = styled.div`
     display: flex; 
     margin: 4.5rem 1rem;
@@ -89,7 +95,7 @@ export const SingleVideo = styled.div`
         padding: 1rem;
     }
 `
-
+//links
 export const LinksContainer = styled.div`
     color:white;
     font-size: 1.2rem;
@@ -116,7 +122,7 @@ export const LinksContainer = styled.div`
         margin: 0;
     }
 `
-
+//footer
 export const FooterCont = styled.div`
     color: #7f7f7f;
     width: 100%;
