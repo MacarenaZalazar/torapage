@@ -3,3 +3,8 @@ export const links = {
     instagram: 'https://www.instagram.com/tora.musica/', mail: 'holasoytora@gmail.com', 
     spotify:'https://open.spotify.com/artist/2COOsBxzOpAuSVQlj8iN07?si=kN0GIMIMSA6WfZynzrazFw'
 }
+
+export const urlVideo =[
+    'https://www.youtube.com/watch?v=2enLZeIzCs0',
+    'https://www.youtube.com/watch?v=VFeWNBZasGc'
+]
