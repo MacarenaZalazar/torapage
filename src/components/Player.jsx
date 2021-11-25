@@ -1,19 +1,25 @@
 import React from 'react';
+import porTodas from '../utils/porTodas.mp3';
+import useSound from 'use-sound';
+import { useEffect, useState } from 'react';
 
-const Player = ({play, stop, playing, setPlaying}) => {
+const Player = () => {
+    const [play, {stop}] = useSound(porTodas)
+    const [playing, setPlaying] = useState(true)
+    useEffect(()=>{
+      play()
+    }, [play])
     const handlePlayer = () => {
         if(playing){
             stop()
             setPlaying(false)
-        } else {
+        } else{
             play()
             setPlaying(true)
         }
     }
     return (
-        <div>
-            <p>música <span onClick={()=> handlePlayer}>{playing ? 'off': 'on'}</span></p> 
-        </div>
+            <p style={{margin: 0}} onClick={()=> handlePlayer()}>música {playing ? 'OFF': 'ON'}</p> 
     );
 };
 

@@ -1,21 +1,46 @@
-import './App.css';
-import backgroundImg from './utils/background-image.jpg'
-import porTodas from './utils/porTodas.mp3'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import backgroundImg from './utils/back.jpg'
 import { AppContainer } from './appStyle';
-import useSound from 'use-sound'
+import Links from './components/Links';
+import VideoContainer from './components/VideoContainer';
+import Bandcamp from './components/Bandcamp';
+import Navigator from './components/Navigator';
+import About from './components/About';
 import { useEffect, useState } from 'react';
-import Player from './components/Player';
+import Scroll from './components/Scroll';
+import Cafecito from './components/Cafecito';
+import Footer from './components/Footer';
+
+
+const useWindowSize = () => {
+  const [windowSize, setWindowSize] = useState(window.innerWidth)
+  useEffect(()=> {
+      const handleResize = () => {
+          setWindowSize(window.innerWidth)
+          window.addEventListener('resize', handleResize)
+      }
+      handleResize()
+      return () => {
+          window.removeEventListener('resize', handleResize)
+      }
+  }, [])
+  return windowSize
+}
 
 function App() {
-  const[play, {stop}] = useSound(porTodas)
-  const [playing, setPlaying] = useState(true)
-  useEffect(()=>{
-    play()
-  }, [play])
+  const size = useWindowSize()
+  console.log(size)
+  const direction = size < 450 ? 'column' : 'row';
   return (
-    <AppContainer img={backgroundImg}>
-      <h1>Bienvenidxs a TORA</h1>
-      <Player play={play} stop={stop} playing={playing} setPlaying={setPlaying} />
+    <AppContainer size={size} img={backgroundImg}>
+      <Navigator size={size} />
+      <About size={size} />
+      <Bandcamp direction={direction} size={size} />
+      <VideoContainer size={size}/>
+      <Links size={size} />
+      <Scroll/>
+      <Cafecito direction={direction}/>
+      <Footer/>
     </AppContainer>
   );
 }

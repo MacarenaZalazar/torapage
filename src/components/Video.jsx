@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
+import { SingleVideo } from './Styles';
 
-const Video = ({url}) => {
+const Video = ({url, width, height}) => {
     return (
-        <div>
-           <ReactPlayer url={url} />
-            
-        </div>
+        <SingleVideo>
+            <p>Mirá el primer videoclip de <b>TORA</b></p>
+           <ReactPlayer width={width} height={height} controls url={url} />
+        </SingleVideo>
     );
 };
 
