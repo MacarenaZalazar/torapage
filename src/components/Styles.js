@@ -37,48 +37,45 @@ export const AboutCont = styled.div`
 `
 
 export const ImgCont = styled.div`
-display: flex;
-flex-direction: ${props => props.direction} ;
-.img{
-    max-height: 300px;
-    padding: 0.9rem;
+    display: flex;
+    flex-direction: ${props => props.direction} ;
+    .img{
+        max-height: 300px;
+        padding: 0.9rem;
 
-}
+    }
 `
 
 //credits
-export const Credits = styled.p`
+export const Credits = styled.div`
     color: white;
     margin: 1.5rem
-    a{
-        color: white;
-    }
 `
 //arrow
 export const UpArrow = styled.a`
-position: fixed;
-color:white;
-bottom: 0;
-right: 0;
-padding-right: 1.6rem;
-padding-botom: 3rem;
-font-size: 3rem;
-    :hover{
-        color:#00263b;
-    }
+    position: fixed;
+    color:white;
+    bottom: 0;
+    right: 0;
+    padding-right: 1.6rem;
+    padding-botom: 3rem;
+    font-size: 3rem;
+        :hover{
+            color:#00263b;
+        }
 
 `
 //cafecito
 export const CafecitoCont = styled.div`
-color: white;
-display: flex;
-flex-direction: ${props => props.direction};
-align-items: center;
-margin: 4.5rem 1rem;
-    p{
-        font-size: ${props => props.size};
-        margin: 1rem 0.7rem;
-    }
+    color: white;
+    display: flex;
+    flex-direction: ${props => props.direction};
+    align-items: center;
+    margin: 4.5rem 1rem;
+        p{
+            font-size: ${props => props.size};
+            margin: 1rem 0.7rem;
+        }
 `
 //video
 export const VideoCont = styled.div`

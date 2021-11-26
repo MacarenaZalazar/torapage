@@ -15,7 +15,7 @@ const Bandcamp = ({size, direction}) => {
                      en el marco de la convocatoria <i>"Creación para músicxs"</i>, 
                      donde el grupo fue premiado con 1 de las 6 becas disponibles para la producción de canciones en medio de la pandemia por el COVID-19.
                 </p>
-                <Credits>Fotografías por <a href='https://www.instagram.com/macarena_aha/' target='_blank' rel="noreferrer"> Macarena Ifran</a><br/></Credits>
+                <Credits><p>Fotografías por <a href='https://www.instagram.com/macarena_aha/' target='_blank' rel="noreferrer" className='linked'> Macarena Ifran</a></p></Credits>
             </TextContainer>
         </BCcont>
     );

@@ -11,6 +11,7 @@ export const AppContainer = styled.div`
     background-image: url(${props => props.img});
     background-size: cover;
     background-repeat: no-repeat;
+    color:white;
     h1{
         color: white;
         transition: 0.5s ease;
