@@ -4,14 +4,14 @@ import useSound from 'use-sound';
 import { useEffect, useState } from 'react';
 
 const Player = () => {
-    const [play, {stop}] = useSound(porTodas)
+    const [play, {pause}] = useSound(porTodas, {volume: 0.3})
     const [playing, setPlaying] = useState(true)
     useEffect(()=>{
       play()
     }, [play])
     const handlePlayer = () => {
         if(playing){
-            stop()
+            pause()
             setPlaying(false)
         } else{
             play()
