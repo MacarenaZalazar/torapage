@@ -6,8 +6,8 @@ import { VideoCont } from './Styles';
 
 
 const VideoContainer = ({size}) => {
-    const width = size < 450 ? '400px' : '640px'
-    const height = size < 450 ? '225px' : '360px'
+    const width = size < 450 ? '320px' : '640px'
+    const height = size < 450 ? '180px' : '360px'
     return (
         <VideoCont id='videos'>
             {urlVideo.map((e, i) => {
