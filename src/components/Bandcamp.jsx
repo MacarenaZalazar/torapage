@@ -2,10 +2,10 @@ import React from 'react';
 import BandcampPlayer from 'react-bandcamp'
 import { BCcont, TextContainer, Credits} from './Styles';
 const Bandcamp = ({size, direction}) => {
-    const width = size < 450 ? '100%' : '50%'
+    const width = size < 858 ? '100%' : '50%'
     return (
         <BCcont direction={direction} id='album'>
-                <BandcampPlayer style={{height: '100%'}} tracklist={false} size={size < 450 ? 'small' : 'large'} album='149443081'/>
+                <BandcampPlayer style={{height: '100%'}} tracklist={false} size={size < 858 ? 'small' : 'large'} album='149443081'/>
             <TextContainer width={width}>
                
                 <p className='text'><b>Las cosas que no se nombran</b> es el último material de <b>TORA</b>, en colaboración 

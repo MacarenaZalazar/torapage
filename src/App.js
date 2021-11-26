@@ -30,7 +30,7 @@ const useWindowSize = () => {
 function App() {
   const size = useWindowSize()
   console.log(size)
-  const direction = size < 450 ? 'column' : 'row';
+  const direction = size < 858 ? 'column' : 'row';
   return (
     <AppContainer size={size} img={backgroundImg}>
       <Navigator size={size} />
