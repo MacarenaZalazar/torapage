@@ -20,12 +20,12 @@ const Links = ({size}) => {
             <div className='separator'>
                 <p className='title'>Para Ver y Escuchar</p>
                 <div className='divs'>
-                <Button size={btnsize} variant='outline-light'  href={links.spotify} target='_blank' rel="noreferrer"> <FaSpotify/> spotify</Button>
                 <Button size={btnsize} variant='outline-light'  href={links.youtube}  target='_blank' rel="noreferrer"><FaYoutube/> youtube</Button>
+                <Button size={btnsize} variant='outline-light'  href={links.spotify} target='_blank' rel="noreferrer"> <FaSpotify/> spotify</Button>
                 </div>
             </div>
             <div className='separator'>
-                <p className='title'>Adquirí mis discos!</p>
+                <p className='title'>Para descargar!</p>
                 <div className='divs'>
                     <Button size={btnsize} variant='outline-light'  href={links.bandcamp} target='_blank' rel="noreferrer"> <FaBandcamp/> bandcamp</Button>
                 </div>
